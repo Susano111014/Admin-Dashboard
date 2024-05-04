@@ -18,19 +18,19 @@ body {
 }
 
 .header {
-    background-color: blue;
+    background-color: rgb(52, 52, 182);
     border: 3px solid #fff;
     grid-area: header;
 }
 
 .sidebar {
-    border: 3px solid #4f6d;
+    border: 3px solid rgba(56, 135, 70, 0.867);
     grid-area: sidebar;
-    background-color: green;
+    background-color: rgb(73, 151, 73);
 }
 
 .content {
     border: 3px solid #55a;
     grid-area: content;
-    background-color: purple;
+    background-color: rgb(147, 54, 147);
 }
