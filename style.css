@@ -8,12 +8,10 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    
+    grid-template-rows: 1fr 3fr;
     gap: 10px;
     grid-template-areas:
     'sidebar header'
-    'sidebar content'
-    'sidebar content'
     'sidebar content'
 }
 
