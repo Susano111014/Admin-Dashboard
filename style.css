@@ -84,3 +84,14 @@ body {
     color: white;
     background-color:#0891b2;
 }
+
+.DStitle + menu,
+.DStitle + menu + menu {
+    display: grid;
+}
+
+.DSitem {
+    background-repeat: no-repeat;
+    background-size: 23px;
+    padding-left:30px;
+}
