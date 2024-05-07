@@ -37,6 +37,7 @@ body {
 
 * {
     list-style-type: none;
+    padding: 0%;
 }
 
 .breakin-news,
@@ -83,15 +84,41 @@ body {
     font-family: var(--font);
     color: white;
     background-color:#0891b2;
+    display: grid;
+    grid-template-rows: 0.4fr 1fr 1fr;
 }
 
 .DStitle + menu,
 .DStitle + menu + menu {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+
 }
+
+.DStitle + menu + menu {
+    margin-top: 45px;
+}
+
 
 .DSitem {
     background-repeat: no-repeat;
-    background-size: 23px;
-    padding-left:30px;
+    background-position-y: 9px;
+    background-size: 30px;
+    padding-left:45px;
+    flex: 0 1 20%;
+    line-height: -30px;
+    margin-left:10%;
+}
+
+.DStitle {
+    text-align: center;
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    background-position:10%  16px;
+    background-size: 70px;
+}
+
+.DSitem + p {
+  margin: auto 0;
 }
