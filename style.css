@@ -1,7 +1,8 @@
 body {
     background-color: #000;
     height: 840px;
-
+    min-height: 840px;
+    min-width: 698px;
 }
 
 .box 
@@ -85,15 +86,16 @@ body {
     color: white;
     background-color:#0891b2;
     display: grid;
-    grid-template-rows: 0.4fr 1fr 1fr;
+    min-width: 182.078px;
+    min-height:785.391px;
 }
 
-.DStitle + menu,
-.DStitle + menu + menu {
+.Logo + menu,
+.Logo + menu + menu {
     display: flex;
     flex-direction: column;
-    align-items: initial;
-
+    justify-content: flex-start;
+    max-height: 337px;
 }
 
 .DStitle + menu + menu {
@@ -107,16 +109,27 @@ body {
     background-size: 30px;
     padding-left:45px;
     flex: 0 1 20%;
-    line-height: -30px;
     margin-left:10%;
 }
 
 .DStitle {
     text-align: center;
-    padding-top: 40px;
-    background-repeat: no-repeat;
-    background-position:10%  16px;
-    background-size: 70px;
+    margin-left: 15%;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    margin-left: 20%;
+}
+
+.Logo {
+    display: grid;
+    grid-template-columns: minmax(20%, 90px ) max-content;
+    align-items: center;
+    justify-items: start;
+    width: 92%;
+    min-width: 175px;
 }
 
 .DSitem + p {
