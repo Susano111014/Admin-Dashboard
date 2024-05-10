@@ -10,7 +10,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: 0.9fr 4fr;
-    grid-template-rows: min-content 2fr;
+    grid-template-rows: 1.1fr 4fr;
     grid-template-areas:
     'sidebar header'
     'sidebar content'
@@ -60,7 +60,7 @@ body {
     grid-column: 2/3;
 }
 
-/*lay out*/
+/* sidebar layout*/
 
 @font-face {
     font-family:'roboto-black';
@@ -77,6 +77,7 @@ body {
 body {
     --font-system: 'roboto-black', 'roboto-bold';
     font-family: var(--font-system), system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
 }
 
 
@@ -135,3 +136,107 @@ img {
 .DSitem + p {
   margin: auto 0;
 }
+/* sidebar layout*/
+
+
+/*header layout*/
+.header  * {
+    margin: 0%;
+    padding: 0%;
+}
+
+.header {
+    font-family: inherit;
+    display: grid;
+    grid-template-columns: 2fr  1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #ffffff;
+}
+
+.input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    height: 35px;
+    border-radius:30px;
+    background-color: rgb(229, 230, 239);
+    border: none;
+}
+
+input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { /*delete the X icon of the field search in safari*/
+    display: none; 
+}
+
+.glass {
+    width: 40px;
+    height: 40px;
+}
+
+.morgana[src='./logos-svg/morgana.svg'] {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(223, 223, 232);
+    border-radius: 40px;
+    box-shadow: 2.5px 2.5px gray;
+}
+
+.logo-header {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: end;
+    align-items: start;
+    padding-left: 8%;
+    gap: 2%;
+}
+
+.logo-header > p {
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+
+.logo-header  span {
+    font-size: 1rem;
+}
+
+.buttons, .notification {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+div + .notification {
+    gap: 6%;
+}
+
+.buttons * {
+    background-color: #0891b2;
+    padding: 10px;
+    border-radius: 30px;
+    width: 100px;
+    color: #fff;
+    border-color: #0891b2;
+    box-shadow: none;
+    border-style: solid;
+}
+
+
+.notification img[src ='./logos-svg/morgana.svg'] {
+    width: 55px;    
+    height: 55px;
+    border-radius: 35px;
+}
+/*header layout*/
+
+
+
+
+
