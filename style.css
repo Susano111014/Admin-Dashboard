@@ -1,19 +1,18 @@
+
+
 body {
-    background-color: #000;
-    height: 840px;
-    min-height: 840px;
-    min-width: 698px;
+    background-color: rgb(229, 230, 239);
 }
 
 .box 
 { 
-    height: 100%;
     display: grid;
     grid-template-columns: 0.9fr 4fr;
-    grid-template-rows: 1.1fr 4fr;
+    grid-template-rows: 1.1fr 5fr;
     grid-template-areas:
     'sidebar header'
-    'sidebar content'
+    'sidebar content';
+    overflow-y: hidden;
 }
 
 .header {
@@ -26,18 +25,16 @@ body {
     border: 3px solid rgba(56, 135, 70, 0.867);
     grid-area: sidebar;
     background-color: rgb(73, 151, 73);
-    height: 100%;
 }
 
 .content {
-    border: 3px solid #55a;
-    background-color: rgb(147, 54, 147);
     grid-row: 1/3;
 }
 
 * {
     list-style-type: none;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 .breakin-news,
@@ -86,8 +83,7 @@ body {
     color: white;
     background-color:#0891b2;
     display: grid;
-    min-width: 182.078px;
-    min-height:785.391px;
+    min-width: 170px;
 }
 
 .Logo + menu,
@@ -109,16 +105,16 @@ body {
     background-size: 30px;
     padding-left:45px;
     flex: 0 1 20%;
-    margin-left:10%;
+    margin-left:5%;
 }
 
 .DStitle {
     text-align: center;
-    margin-left: 7%;
+    margin-left: 10%;
 }
 
 img {
-    --margin-size:calc(50% - 20px);
+    --margin-size:calc(50% - 10px);
     width: 78%;
     height: 78%;
     margin-left: var(--margin-size);
@@ -129,8 +125,8 @@ img {
     grid-template-columns: minmax(20%, 90px ) 1fr;
     align-items: center;
     justify-items: start;
-    width: 92%;
-    min-width: 175px;
+    width: 90%;
+    font-size: 1em;
 }
 
 .DSitem + p {
@@ -169,8 +165,13 @@ input {
     border: none;
 }
 
-input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { /*delete the X icon of the field search in safari*/
+ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { /*delete the X icon of the field search in safari*/
     display: none; 
+} 
+
+input:focus {
+    border: solid 3px blueviolet;
+    outline: none;
 }
 
 .glass {
@@ -191,7 +192,7 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { /*dele
     grid-template-columns: max-content 1fr;
     justify-content: end;
     align-items: start;
-    padding-left: 8%;
+    padding-left: 9%;
     gap: 2%;
 }
 
@@ -236,7 +237,54 @@ div + .notification {
 }
 /*header layout*/
 
+/*main content style and layout*/
+.main {
+    background-color: rgb(229, 230, 239);
+    display: grid;
+    grid-template-columns:  3fr repeat(1, 1fr);
+    grid-template-rows: 1fr repeat(4, 3fr) 1fr;
+}
 
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    grid-row: 2/6;
+    gap: 5.5% 3%;
+    padding: 3%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    border-left: 6.5px solid rgb(253, 143, 53);
+    padding-left: 3%;
+    box-shadow: 0px 0px 3px 1px  black;
+    padding-top: 15px;
+    font-size: 1.2rem;
+}
+
+.card span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+ .main > span {
+    font-size: 1.5rem;
+    padding-left: 3%;
+
+} 
+
+
+.breakin-news {
+    grid-row: 3/6;
+    overflow-x: hidden;
+}
+
+.profiles {
+    grid-row: 2/5;
+    overflow-x: hidden;
+}
 
 
 
