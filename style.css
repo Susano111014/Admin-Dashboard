@@ -286,5 +286,21 @@ div + .notification {
     overflow-x: hidden;
 }
 
+.card ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+    gap: 6%;
+    width: 93%;
+    
+}
+
+.card ul > li {
+    width: 30px;
+    height: 30px;
+}
+
 
 
